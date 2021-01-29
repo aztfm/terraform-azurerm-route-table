@@ -13,24 +13,24 @@
 
 The following parameters are supported:
 
-| Name                          | Description                                                                           |        Type         | Default | Required |
-| ----------------------------- | ------------------------------------------------------------------------------------- | :-----------------: | :-----: | :------: |
-| name                          | The name of the route table.                                                          |      `string`       |   n/a   |   yes    |
-| resource\_group\_name         | The name of the resource group in which to create the route table.                    |      `string`       |   n/a   |   yes    |
-| location                      | The location/region where the route table is created.                                 |      `string`       |   n/a   |   yes    |
-| routes                        | List of objects that represent the configuration of each route.                       | `list(map(string))` |  `[]`   |    no    |
-| disable_bgp_route_propagation | Boolean flag which controls propagation of routes learned by BGP on that route table. |       `bool`        | `true`  |    no    |
-| tags                          | A mapping of tags to assign to the resource.                                          |    `map(string)`    |  `{}`   |    no    |
+| Name                             | Description                                                                           |        Type         | Default | Required |
+| -------------------------------- | ------------------------------------------------------------------------------------- | :-----------------: | :-----: | :------: |
+| name                             | The name of the route table.                                                          |      `string`       |   n/a   |   yes    |
+| resource\_group\_name            | The name of the resource group in which to create the route table.                    |      `string`       |   n/a   |   yes    |
+| location                         | The location/region where the route table is created.                                 |      `string`       |   n/a   |   yes    |
+| routes                           | List of objects that represent the configuration of each route.                       | `list(map(string))` |  `[]`   |    no    |
+| disable\_bgp\_route\_propagation | Boolean flag which controls propagation of routes learned by BGP on that route table. |       `bool`        | `true`  |    no    |
+| tags                             | A mapping of tags to assign to the resource.                                          |    `map(string)`    |  `{}`   |    no    |
 
 ##
 The `routes` supports the following:
 
-| Name                   | Description                                                                                                                                              |   Type   | Default | Required |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: | :-----: | :------: |
-| name                   | The name of the route.                                                                                                                                   | `string` |   n/a   |   yes    |
-| address_prefix         | The destination CIDR to which the route applies.                                                                                                         | `number` |   n/a   |   yes    |
-| next_hop_type          | The type of Azure hop the packet should be sent to. Possible values are `VirtualNetworkGateway`, `VnetLocal`, `Internet`, `VirtualAppliance` and `None`. | `string` |   n/a   |   yes    |
-| next_hop_in_ip_address | Contains the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is `VirtualAppliance`.        | `string` | `null`  |    no    |
+| Name                       | Description                                                                                                                                              |   Type   | Default | Required |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: | :-----: | :------: |
+| name                       | The name of the route.                                                                                                                                   | `string` |   n/a   |   yes    |
+| address\_prefix            | The destination CIDR to which the route applies.                                                                                                         | `number` |   n/a   |   yes    |
+| next\_hop\_type            | The type of Azure hop the packet should be sent to. Possible values are `VirtualNetworkGateway`, `VnetLocal`, `Internet`, `VirtualAppliance` and `None`. | `string` |   n/a   |   yes    |
+| next\_hop\_in\_ip\_address | Contains the IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is `VirtualAppliance`.        | `string` | `null`  |    no    |
 
 ## Outputs
 
