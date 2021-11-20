@@ -1,7 +1,7 @@
 # Azure Route Table - Terraform Module
-![Testing module](https://github.com/aztfm/terraform-azurerm-route-table/workflows/Testing%20module/badge.svg?branch=main)
-[![TF Registry](https://img.shields.io/badge/terraform-registry-blueviolet.svg)](https://registry.terraform.io/modules/aztfm/route-table/azurerm/)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/aztfm/terraform-azurerm-route-table)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/aztfm/terraform-azurerm-route-table/Release?label=Testing&logo=GitHub)
+[![Terraform Registry](https://img.shields.io/badge/Terraform-registry-blueviolet.svg?logo=terraform)](https://registry.terraform.io/modules/aztfm/route-table/azurerm/)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/aztfm/terraform-azurerm-route-table?label=Release)
 
 ## Version compatibility
 
@@ -22,7 +22,6 @@ The following parameters are supported:
 | disable\_bgp\_route\_propagation | Boolean flag which controls propagation of routes learned by BGP on that route table. |       `bool`        | `true`  |    no    |
 | tags                             | A mapping of tags to assign to the resource.                                          |    `map(string)`    |  `{}`   |    no    |
 
-##
 The `routes` supports the following:
 
 | Name                       | Description                                                                                                                                              |   Type   | Default | Required |
