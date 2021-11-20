@@ -1,7 +1,3 @@
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_resource_group" "TFAZRT" {
   name     = "terraform-azurerm-route-table"
   location = "West Europe"
