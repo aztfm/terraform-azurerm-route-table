@@ -1,3 +1,13 @@
+## 2.0.0 (June XX, 20XX)
+
+BREAKING CHANGES:
+
+* dependencies: updating to `v1.3.0` minimum of `terraform`.
+
+ENHANCEMENTS:
+
+* Internal changes that change the way data is received by child parameters, but do not change the behavior of the module.
+
 ## 1.0.1 (November 28, 2021)
 
 ENHANCEMENTS:
