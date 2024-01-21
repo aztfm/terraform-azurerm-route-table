@@ -48,42 +48,42 @@ run "plan" {
 
   assert {
     condition     = azurerm_route_table.rt.disable_bgp_route_propagation == false
-    error_message = ""
+    error_message = "The bgp route propagation of route table is being modified."
   }
 
   assert {
     condition     =  azurerm_route.routes["route1"].name == ({ for r in var.routes : r.name => r })["route1"].name
-    error_message = ""
+    error_message = "The route1 name is being modified."
   }
 
   assert {
     condition     =  azurerm_route.routes["route1"].address_prefix == ({ for r in var.routes : r.name => r })["route1"].address_prefix
-    error_message = ""
+    error_message = "The route1 address prefix is being modified."
   }
 
   assert {
     condition     =  azurerm_route.routes["route1"].next_hop_type == ({ for r in var.routes : r.name => r })["route1"].next_hop_type
-    error_message = ""
+    error_message = "The route1 next hop type is being modified."
   }
 
   assert {
     condition     =  azurerm_route.routes["route1"].next_hop_in_ip_address == ({ for r in var.routes : r.name => r })["route1"].next_hop_in_ip_address
-    error_message = ""
+    error_message = "The next hop in ip address of route1 is being modified."
   }
 
   assert {
     condition     =  azurerm_route.routes["route2"].name == ({ for r in var.routes : r.name => r })["route2"].name
-    error_message = ""
+    error_message = "The route2 name is being modified."
   }
 
   assert {
     condition     =  azurerm_route.routes["route2"].address_prefix == ({ for r in var.routes : r.name => r })["route2"].address_prefix
-    error_message = ""
+    error_message = "The route2 address prefix is being modified."
   }
 
   assert {
     condition     =  azurerm_route.routes["route2"].next_hop_type == ({ for r in var.routes : r.name => r })["route2"].next_hop_type
-    error_message = ""
+    error_message = "The route2 next hop type is being modified."
   }
 }
 
