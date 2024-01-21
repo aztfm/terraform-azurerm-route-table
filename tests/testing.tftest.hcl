@@ -32,22 +32,22 @@ run "plan" {
   }
 
   assert {
-    condition     = azurerm_virtual_network.vnet.name == run.setup.workspace_id
+    condition     = azurerm_route_table.rt.name == run.setup.workspace_id
     error_message = "The route table name input variable is being modified."
   }
 
   assert {
-    condition     = azurerm_virtual_network.vnet.resource_group_name == run.setup.resource_group_name
+    condition     = azurerm_route_table.rt.resource_group_name == run.setup.resource_group_name
     error_message = "The route table resource group input variable is being modified."
   }
 
   assert {
-    condition     = azurerm_virtual_network.vnet.location == run.setup.resource_group_location
+    condition     = azurerm_route_table.rt.location == run.setup.resource_group_location
     error_message = "The route table location input variable is being modified."
   }
 
   assert {
-    condition     = azurerm_virtual_network.vnet.disable_bgp_route_propagation == false
+    condition     = azurerm_route_table.rt.disable_bgp_route_propagation == false
     error_message = ""
   }
 
