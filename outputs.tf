@@ -18,6 +18,11 @@ output "location" {
   description = "The location/region where the route table is created."
 }
 
+output "tags" {
+  value       = azurerm_route_table.rt.tags
+  description = "The tags assigned to the resource."
+}
+
 output "routes" {
   value       = azurerm_route_table.rt.route
   description = "Blocks containing configuration of each route."
@@ -26,9 +31,4 @@ output "routes" {
 output "subnets" {
   value       = azurerm_route_table.rt.subnets
   description = "List of the ids of the subnets configured to the route table."
-}
-
-output "tags" {
-  value       = azurerm_route_table.rt.tags
-  description = "The tags assigned to the resource."
 }

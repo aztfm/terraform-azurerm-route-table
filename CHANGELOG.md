@@ -1,3 +1,15 @@
+<!-- markdownlint-disable MD041 MD013 -->
+## 2.0.0 (January 21, 2024)
+
+BREAKING CHANGES:
+
+* dependencies: updating to `v1.3.0` minimum of `terraform`.
+
+ENHANCEMENTS:
+
+* Internal changes that change the way data is received by child parameters, but do not change the behavior of the module.
+* The routes defined in the route table are now a apart resource, this going to recreate the routes of the route tables created with versions before to `2.0.0`.
+
 ## 1.0.1 (November 28, 2021)
 
 ENHANCEMENTS:
