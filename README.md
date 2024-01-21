@@ -47,7 +47,7 @@ The following outputs are exported:
 |name|The name of the route table.|no|
 |resource_group_name|The name of the resource group in which to create the route table.|no|
 |location|The location/region where the route table is created.|no|
+|tags|The tags assigned to the resource.|no|
 |routes|Blocks containing configuration of each route.|no|
 |subnets|List of the ids of the subnets configured to the route table.|no|
-|tags|The tags assigned to the resource.|no|
 <!-- END_TF_DOCS -->
